@@ -1,6 +1,7 @@
 package br.com.facto.ED;
-
 import javax.swing.JOptionPane;
+
+//Classe principal
 
 public class Start {
 	static int menu;
@@ -11,7 +12,7 @@ public class Start {
 		Agenda C = new Agenda();
 
 		menu = Integer.parseInt(JOptionPane
-				.showInputDialog(" Excolha uma das opcões \n" + " 1-Inserir \n"
+				.showInputDialog(" Excolha uma das opcï¿½es \n" + " 1-Inserir \n"
 						+ " 2- Pesquisar \n" + " 3-Pemover \n"
 						+ " 4 Imprimir \n" + " 5 Sair"));
 
@@ -23,9 +24,6 @@ public class Start {
 			C.nome = nome;
 			C.telefone = fone;
 			A.insere(C);
-			
-		
-
 			
 
 			A.imprimir(A.raiz);
