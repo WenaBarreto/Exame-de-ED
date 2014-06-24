@@ -3,11 +3,13 @@ package br.com.facto.ED;
 import Aula05_Arvores.No;
 
 /**
- * @author Raniel Sousa classe Arvore
+ * Classe que implementa uma agenda em Ã¡rvore.
+ * @author Raniel Sousa 
  * */
 public class Arvore {
 	No raiz;
 
+//MÃ©todo inserir
 	public void insere(Agenda contato) {
 		No novo = new No();
 
@@ -24,14 +26,15 @@ public class Arvore {
 		raiz = inserir(novo, raiz);
 	}
 
-	// NÃO ESTA INSERINDO NA ORDEM AFALBETICA NÃO
+//MÃ©todo recursivo do inserir
+	// Nï¿½O ESTA INSERINDO NA ORDEM AFALBETICA Nï¿½O
 	public No inserir(No novo, No inicio) {
 
 		if (inicio != null) {
-			if (novo.C.nome.equals(inicio.C.nome))// ACHO QUE O "compareTO" deve
-													// se
-			// ussado aqui para inserir em ondem
-			// afabeitica
+			if (novo.C.nome.equals(inicio.C.nome))
+			// Aqui vc tem que collocar o compareTo, eu nÃ£o tenho ele aqui
+			//pesquisa na net ai como que usa.
+			
 			{
 				inicio.esq = inserir(novo, inicio.esq);
 			} else {
@@ -44,9 +47,9 @@ public class Arvore {
 
 	}
 
-	// NÃO ESTÁ IMPRIMINDO NA ONDEM ALFABETICA
+//MÃ©todo de impressÃ£o da agenda
+	// Nï¿½O ESTï¿½ IMPRIMINDO NA ONDEM ALFABETICA
 	public void imprimir(No raiz) {
-
 		if (raiz != null) {
 			imprimir(raiz.esq);
 			System.out.println("Nome:" + " " + raiz.C.nome + "  " + "Telefone:"
@@ -54,11 +57,9 @@ public class Arvore {
 			imprimir(raiz.dir);
 		}
 		
-		
-		
-		
 	}
 	
+// MÃ©todo remover da agenda
 	public No remover(No raiz, Agenda contatos)
 	{
 		if(raiz != null)
@@ -119,14 +120,9 @@ public class Arvore {
 
 	
 
-	// METODO E PARA TESTE A CLASSE, MAS SERA REMOVIDO DEPOIS
+//TEM QUE TIRAR ISSO DAQUI !!!!!
 	public static void main(String[] args) {
 		Agenda C = new Agenda();
 		Arvore A = new Arvore();
-		
-		
-		
-
 	}
-
 }
